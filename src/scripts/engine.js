@@ -1,20 +1,12 @@
 const emojis = [
-  "🐱",
-  "🐱",
-  "🦝",
-  "🦝",
-  "🦊",
-  "🦊",
-  "🐶",
-  "🐶",
-  "🐵",
-  "🐵",
-  "🦁",
-  "🦁",
-  "🐯",
-  "🐯",
-  "🐮",
-  "🐮",
+  "🐱","🐱",
+  "🦝","🦝",
+  "🦊","🦊",
+  "🐶","🐶",
+  "🐵","🐵",
+  "🦁","🦁",
+  "🐯","🐯",
+  "🐮","🐮",
 ];
 let openCards = [];
 
@@ -33,11 +25,9 @@ function handleClick() {
     this.classList.add("boxOpen");
     openCards.push(this);
   }
-
   if (openCards.length == 2) {
     setTimeout(checkMatch, 500);
   }
-
   console.log(openCards);
 }
 
@@ -49,9 +39,9 @@ function checkMatch() {
     openCards[0].classList.remove("boxOpen");
     openCards[1].classList.remove("boxOpen");
   }
-
+  
   openCards = [];
-
+  
   if (document.querySelectorAll(".boxMatch").length === emojis.length) {
     alert("Você venceu !");
   }
